@@ -1,0 +1,110 @@
+{% extends "base.html.tera" %}
+
+{% block content %}
+    <!-- Левая колонка: описание проекта и кнопка -->
+            <div class="sidebar-column">
+                <h2>О проекте</h2>
+                <p>В мрачном подземелье <strong>Dark and Darker</strong> обитает множество опасных существ.
+                Каждый противник имеет уникальные механики боя, сопротивляемости и тактики для победы.
+                В этом бестиарии собраны описания монстров, встречающихся в различных локациях игры.</p>
+                <p>От демонов Инферно до ледяных созданий Ледяных пещер — каждое существо требует своего
+                подхода. Изучай повадки врагов, их сильные и слабые стороны, чтобы увереннее проходить подземелья.</p>
+                <!-- btn btn-primary btn-sm — Bootstrap: синяя кнопка маленького размера -->
+                <p><a href="add_form.html" class="btn btn-primary btn-sm">Добавить объект</a></p>
+                <p class="small-hint">На странице есть ссылки на всех персонажей и отдельные страницы видов.</p>
+            </div>
+
+            <!-- Правая колонка: таблица всех монстров -->
+            <div class="content-column">
+                <h2>Бестиарий: противники по локациям</h2>
+
+                <div class="table-responsive-xl">
+                    <table class="table">
+                        <!-- table-bordered: рамки, table-hover: подсветка строки, align-middle: выравнивание -->
+                        <table class="objects-table table table-bordered table-hover align-middle" >
+                            <!-- table-dark: тёмный фон шапки таблицы -->
+
+
+                            <tr class="table-dark">
+                                <th>№</th>
+                                <th>Название</th>
+                                <th>Изображение</th>
+                                <th>Краткое описание</th>
+                                <th>Вид</th>
+                            </tr>
+                            <!-- Каждая строка: номер, ссылка-название, ссылка-картинка, описание, ссылка-иконка вида -->
+                            <tr>
+                                <td>1</td>
+                                <td><a href="person/bat.html">Демоническая летучая мышь</a></td>
+                                <td><a href="person/bat.html"><img src="/static/image/Pasted.png" alt="Демоническая летучая мышь" class="thumb"></a></td>
+                                <td>Агрессивный летающий демон, распространённый на уровне Inferno. Опасен скоростью и мощными атаками.</td>
+                                <td><a href="type/demon.html"><img src="="/static/icon/demon_icon.svg" alt="Демон" class="icon"></a></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><a href="person/dog.html">Демонический пёс</a></td>
+                                <td><a href="person/dog.html"><img src="/static/image/Pasted(2).png" alt="Демонический пёс" class="thumb"></a></td>
+                                <td>Быстрый противник Инферно с укусами и рывком. Эффективен в ближнем бою.</td>
+                                <td><a href="type/demon.html"><img src="/static/icon/demon_icon.svg" alt="Демон" class="icon"></a></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><a href="person/lumberjack.html">Ледяной скелет-дровосек</a></td>
+                                <td><a href="person/lumberjack.html"><img src="/static/image/Pasted(3).png" alt="Ледяной скелет-дровосек" class="thumb"></a></td>
+                                <td>Элитный противник ледяных локаций с тяжёлым двуручным топором и уроном холодом.</td>
+                                <td><a href="type/undead.html"><img src="/static/icon/undead_icon.svg" alt="Нежить" class="icon"></a></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><a href="person/walker.html">Морозный ходок</a></td>
+                                <td><a href="person/walker.html"><img src="/static/image/Pasted(4).png" alt="Морозный ходок" class="thumb"></a></td>
+                                <td>Гуманоидный противник стихии холода, замедляющий игрока своими ударами.</td>
+                                <td><a href="type/undead.html"><img src="/static/icon/undead_icon.svg" alt="Нежить" class="icon"></a></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td><a href="person/dragonfly.html">Гигантская стрекоза</a></td>
+                                <td><a href="person/dragonfly.html"><img src="/static/image/Pasted(5).png" alt="Гигантская стрекоза" class="thumb"></a></td>
+                                <td>Летающий враг с ядовитой веерной атакой, встречается в пещерах и замке.</td>
+                                <td><a href="type/insect.html"><img src="/static/icon/insect_icon.svg" alt="Насекомое" class="icon"></a></td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td><a href="person/spider.html">Гигантский паук</a></td>
+                                <td><a href="person/spider.html"><img src="/static/image/Pasted(6).png" alt="Гигантский паук" class="thumb"></a></td>
+                                <td>Опасный паук с ближней атакой и плевком ядовитым снарядом.</td>
+                                <td><a href="type/insect.html"><img src="/static/icon/insect_icon.svg" alt="Насекомое" class="icon"></a></td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td><a href="person/goblin_axe.html">Гоблин с топором</a></td>
+                                <td><a href="person/goblin_axe.html"><img src="/static/image/Pasted(7).png" alt="Гоблин с топором" class="thumb"></a></td>
+                                <td>Типичный противник гоблинских локаций с двумя рубящими атаками.</td>
+                                <td><a href="type/goblin.html"><img src="/static/icon/goblin_icon.svg" alt="Гоблин" class="icon"></a></td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td><a href="person/kobold_archer.html">Ледяной кобольд-лучник</a></td>
+                                <td><a href="person/kobold_archer.html"><img src="/static/image/Pasted(8).png" alt="Ледяной кобольд-лучник" class="thumb"></a></td>
+                                <td>Дальний противник Ледяных пещер, атакующий точными выстрелами.</td>
+                                <td><a href="type/goblin.html"><img src="/static/icon/goblin_icon.svg" alt="Гоблин" class="icon"></a></td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td><a href="person/harpy.html">Гарпия</a></td>
+                                <td><a href="person/harpy.html"><img src="/static/image/Pasted(9).png" alt="Гарпия" class="thumb"></a></td>
+                                <td>Летающий враг Руин, меняющий стиль боя после приземления.</td>
+                                <td><a href="type/beast.html"><img src="/static/icon/beast_icon.svg" alt="Зверь" class="icon"></a></td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td><a href="person/wolf.html">Ледяной волк</a></td>
+                                <td><a href="person/wolf.html"><img src="/static/image/Pasted(10).png" alt="Ледяной волк" class="thumb"></a></td>
+                                <td>Быстрый хищник, атакующий стаями и накладывающий замедление.</td>
+                                <td><a href="type/beast.html"><img src="/static/icon/beast_icon.svg" alt="Зверь" class="icon"></a></td>
+                            </tr>
+                        </table>
+                     </table>
+                </div>
+            </div>
+{% endblock %} 

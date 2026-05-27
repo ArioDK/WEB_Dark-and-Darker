@@ -1,0 +1,155 @@
+/* Общий фон страницы */
+body {
+    background-color: #e8edf5;
+}
+
+/* Белый блок-обёртка по центру — Bootstrap этого не даёт */
+.page {
+    width: 1200px;
+    margin: 0 auto 20px auto;
+    background-color: #ffffff;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Шапка с заголовком — наш фирменный дизайн */
+.header {
+    background-color: #132238;
+    color: #ffffff;
+    padding: 26px 30px;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+/* Основной контент */
+.main {
+    padding: 30px;
+}
+
+/* Для страницы формы — кнопка Назад позиционируется абсолютно */
+.main-relative {
+    position: relative;
+    padding-top: 90px;
+}
+
+/* Футер */
+.footer {
+    background-color: #132238;
+    color: #ffffff;
+    padding: 18px 30px;
+    text-align: right;
+}
+
+/* Кнопка Назад в виде картинки */
+.standard-back { display: inline-block; margin-bottom: 16px; }
+.top-back       { position: absolute; top: 20px; left: 20px; }
+.back-image     { width: 52px; height: 52px; }
+
+/* Миниатюра в таблице */
+.thumb {
+    width: 180px;
+    height: 130px;
+    object-fit: contain;
+    background: #f0f0f0;
+    border: 1px solid #c6d0db;
+    display: block;
+}
+
+/* Иконка вида */
+.icon {
+    width: 46px;
+    height: 46px;
+}
+
+/* Большое фото на странице персонажа */
+.big-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border: 1px solid #c6d0db;
+}
+
+/* Галерея на странице вида */
+.type-image {
+    width: 240px;
+    height: 160px;
+    object-fit: cover;
+    border: 1px solid #c6d0db;
+    margin-right: 10px;
+}
+
+/* Список литературы */
+.literature {
+    padding-left: 20px;
+}
+
+.links-list li {
+    margin-bottom: 8px;
+}
+
+/* Блок вывода добавленных объектов (лаба 7) */
+#objects-output.boxed {
+    border: 2px solid #94a3b8;
+    padding: 15px;
+    min-height: 180px;
+    background-color: #f8fafc;
+}
+
+.output-item {
+    border-bottom: 1px solid #cbd5e1;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+}
+
+.output-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+a { color: #1d4ed8; }
+
+/* Две колонки на главной странице */
+.sidebar-column {
+    float: left;
+    width: 25%;
+    padding: 20px;
+    background-color: #f2f6fb;
+    box-sizing: border-box;
+}
+
+.content-column {
+    float: right;
+    width: 72%;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* Адаптивность для телефона: колонки складываются в одну */
+@media (max-width: 768px) {
+    .page {
+        width: 100%;
+    }
+    .sidebar-column {
+        float: none;
+        width: 100%;
+    }
+    .content-column {
+        float: none;
+        width: 100%;
+    }
+    .object-left {
+        float: none;
+        width: 100%;
+    }
+    .object-right {
+        float: none;
+        width: 100%;
+    }
+}
